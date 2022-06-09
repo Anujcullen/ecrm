@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>User Managements</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Address</th>
+      <th>Policy type</th>
+      <th>Company</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>Policy effective</th>
+      <th>Expiration date</th>
+      <th>Premium</th>
+      <th>Status</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @user_managements.each do |user_management| %>
+      <tr>
+        <td><%= user_management.first_name %></td>
+        <td><%= user_management.last_name %></td>
+        <td><%= user_management.address %></td>
+        <td><%= user_management.policy_type %></td>
+        <td><%= user_management.company %></td>
+        <td><%= user_management.phone %></td>
+        <td><%= user_management.email %></td>
+        <td><%= user_management.policy_effective %></td>
+        <td><%= user_management.expiration_date %></td>
+        <td><%= user_management.premium %></td>
+        <td><%= user_management.status %></td>
+        <td><%= link_to 'Show', user_management %></td>
+        <td><%= link_to 'Edit', edit_user_management_path(user_management) %></td>
+        <td><%= link_to 'Destroy', user_management, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User Management', new_user_management_path %>

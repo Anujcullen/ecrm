@@ -1,0 +1,57 @@
+
+<%= link_to 'New Client', new_client_path, class: "btn btn-primary mt-2 float-right mb-2" %>
+
+<h3 class="text-center">Clients</h3>
+
+<table id="client">
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Address</th>
+      <th>Policy type</th>
+      <th>Company</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>Policy effective</th>
+      <th>Expiration date</th>
+      <th>Premium</th>
+      <th>Status</th>
+ 
+      <th ></th>
+      <th ></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @clients.each do |client| %>
+      <tr>
+        <td><%= client.first_name %></td>
+        <td><%= client.last_name %></td>
+        <td><%= client.address %></td>
+        <td><%= Service.find(client.policy_type).service_name %></td>
+        <td><%= client.company %></td>
+        <td><%= client.phone %></td>
+        <td><%= client.email %></td>
+        <td><%= client.policy_effective %></td>
+        <td><%= client.expiration_date %></td>
+        <td><%= client.premium %></td>
+        <td> <%= client.status ==1 ? "Active" : "Deactive" %></td>
+       
+        <td><%= link_to 'Update', edit_client_path(client), class: "btn btn-secondary btn-sm" %></td>
+        <td><%= link_to 'Delete', client, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-warning btn-sm" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<script>
+$(document).ready( function () {
+    $('#client').DataTable({
+      
+    });
+} );
+
+</script>

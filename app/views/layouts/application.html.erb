@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= content_for?(:title) ? yield(:title) : "User Management Portal" %></title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+
+<link href="https://nightly.datatables.net/css/jquery.dataTables.css" rel="stylesheet" type="text/css" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
+  
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
+  
+</head>
+
+    <% if current_user && current_user.present? %>
+    <body class="view-content">
+      <%= render 'layouts/header' %>
+      <main class="header">
+
+            <div class="container">
+            <br>
+            <span class="notice text-center", id="notice"><%= notice %></span>
+            <span class="alert text-center", id="alert"><%= alert %></span>
+            <div class="content">
+              <%= yield %>
+            </div>
+            <%= render 'layouts/footer' %>
+          </div>
+        </div>
+
+      </div>
+
+      </main>
+    </body>
+    <% else %>
+    <body class="body">
+      <div class="content">
+        <%= yield %>
+        <%= render 'layouts/footer' %>
+      </div>
+    </body>
+    <% end %>
+    <script src="https://nightly.datatables.net/js/jquery.dataTables.js"></script>
+</html>

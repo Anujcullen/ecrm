@@ -1,0 +1,65 @@
+<div class="header">
+
+  <div class="wrapper active">
+
+    <section>
+      <header>
+        <nav class="rad-navigation">
+          <div class="rad-logo-container"><a class="rad-logo" href="/"> <img id="logo1" src="/images/test.png" alt="cdac-logo"><strong> User Management Portal</strong></a>
+            <% if current_user.present? %>
+            </div>
+          <div class="rad-top-nav-container">
+            <ul class="links">
+              <li><%= "Welcome, #{current_user.email}" %></li>
+              <li><%= link_to ' ', destroy_user_session_path, method: :delete, :class=>"fas fa-sign-out-alt" , :title=>"logout"%></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+    </section>
+    <% end %>
+  	<div class="main_body">
+
+  		<div class="sidebar_menu">
+  	        <div class="inner__sidebar_menu">
+
+  	        	<ul>
+  		          <li>
+  		            <a href="/clients" data-method="get">
+  		              <span class="icon">
+  		              	<i class="fas fa-tachometer-alt"></i></span>
+  		              <span class="list">Dashboard</span>
+  		            </a>
+  		          </li>
+
+					<li>
+					<a href="/services" data-method="get">
+					  <span class="icon"><i class="fas fa-gear"></i></span>
+					  <span class="list">Services</span>
+					</a>
+				  </li>
+				  <li>
+
+
+
+  		          <li>
+  		            <a href="/users/edit" data-method="get">
+  		              <span class="icon"><i class="fas fa-address-book"></i></span>
+  		              <span class="list">Profile</span>
+  		            </a>
+  		          </li>
+  		          <li>
+
+  		        </ul>
+
+  		        <div class="hamburger">
+  			        <div class="inner_hamburger">
+  			            <span class="arrow">
+  			                <i class="fas fa-long-arrow-alt-left"></i>
+  			                <i class="fas fa-long-arrow-alt-right"></i>
+  			            </span>
+  			        </div>
+  			    </div>
+
+  	        </div>
+  	    </div>

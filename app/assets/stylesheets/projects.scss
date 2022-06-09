@@ -1,0 +1,218 @@
+.columns{
+  #example-tabs{
+    background: #e8eaed;
+  }
+  #tabs{
+    background: #f5f6f7;
+  }
+}
+//datatable changes
+label {
+  text-transform: capitalize;
+}
+
+#projects-table_filter{
+  label{
+    float: left;
+  }
+}
+.toolbar {
+    float:right;
+}
+//
+.full-tag{
+  --bs-gutter-x: 0rem;
+}
+.project-show-page-width{
+  max-width: 1600px;
+}
+//index style
+.project-list{
+   table, th, td {
+   //padding: 10px;
+   //border: 1px solid black;
+   border-collapse: collapse;
+   }
+   tr:nth-child(even){
+     //background:#fff;
+   }
+   tr:nth-child(odd){
+    // background:#fff;
+   }
+ }
+.top-margin-6{
+  margin-top: 6px;
+}
+.color1{
+  background-color: #caa;
+}
+.color2{
+  background-color: #b1f1fa;
+}
+.table-width{
+  max-width: 1500px;
+}
+.button-margin-top{
+  margin-top: 4px;
+  margin-bottom: -0.1px;
+}
+#activity-datatable_wrapper{
+  margin-top: 0.5%;
+}
+.project-table{
+  //margin-top: 0.5%;
+  table, th, td {
+  //padding: 10px;
+  //border: 1px solid black;
+  //border-collapse: collapse;
+  }
+
+  .completed{
+    background-color: #8cf078;
+    font-weight: bold;
+  }
+  .in-progress{
+    background-color: #f5bf78;
+    font-weight: bold;
+  }
+  .yet-to-start{
+    background-color: #76bef5;
+    font-weight: bold;
+  }
+  .th-style{
+    background: #555;
+    color: #fff;
+    font-size: 14px;
+  }
+  tbody{
+    .stage-bg-color{
+      background-color: #DDD !important;
+    }
+    .text-bold{
+      font-weight: bold;
+    }
+    //stage is stage row background color
+    .stage{
+      //background-color: #DDD;
+    }
+    tr:nth-child(even){
+      background:#fff;
+    }
+    tr:nth-child(odd){
+      background:#fff;
+    }
+  }
+
+  .highlight-col{
+    background: #ff5252 !important;
+  }
+
+}
+
+.margin-right{
+  margin-right: 12%;
+}
+
+.margin-zero{
+  //margin: 0;
+  max-width: 100%;
+}
+
+// task css table id assignment
+/*table {
+  .task{
+    counter-reset: rowNumber-1;
+  }
+}
+
+table {
+  .task {
+    counter-increment: rowNumber;
+  }
+}
+
+table{
+  .stage-id-task-bold{
+    font-weight: bold;
+  }
+  .task{
+    .task-id-task-bold{
+        font-weight: bold;
+      }
+    td:first-child::before {
+      content: counter(rowNumber);
+      min-width: 1em;
+      margin-right: 0.5em;
+    }
+  }
+}
+*/
+
+//tooltip style overide
+.tooltip{background:#000;color:#FFF}
+
+
+//financial toogle css styles
+.table-expand {
+  margin-top: 0.5%;
+}
+
+.table-expand td {
+  //color: #8a8a8a;
+}
+
+.table-expand tr {
+  border: 1px solid #e6e6e6;
+  //margin-top: 0.5%;
+}
+
+.table-expand .text-right {
+  padding-right: 3rem;
+}
+
+.table-expand-row.is-active .expand-icon::after {
+  content: '-';
+}
+
+.table-expand-row .expand-icon::after {
+  content: '+';
+  float: right;
+}
+
+.table-expand-row-content {
+  display: none;
+  font-size: 12px;
+}
+
+.table-expand-row-content.is-active {
+  display: table-row;
+  -webkit-animation: fadeIn ease-in 1;
+          animation: fadeIn ease-in 1;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+}
+
+.table-expand-row-nested {
+  padding: 0;
+  background-color: #e6e6e6;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

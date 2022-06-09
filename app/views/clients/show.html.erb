@@ -1,0 +1,58 @@
+
+<p>
+  <strong>First name:</strong>
+  <%= @client.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @client.last_name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @client.address %>
+</p>
+
+<p>
+  <strong>Policy type:</strong>
+  <%= @client.policy_type %>
+</p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @client.company %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @client.phone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @client.email %>
+</p>
+
+<p>
+  <strong>Policy effective:</strong>
+  <%= @client.policy_effective %>
+</p>
+
+<p>
+  <strong>Expiration date:</strong>
+  <%= @client.expiration_date %>
+</p>
+
+<p>
+  <strong>Premium:</strong>
+  <%= @client.premium %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @client.status ==1 ? "Active" : "Deactive" %>
+</p>
+
+
+<%= link_to '<< Back', clients_path, class:"btn btn-secondary mt-4" %>

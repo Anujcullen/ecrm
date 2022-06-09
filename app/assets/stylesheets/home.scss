@@ -1,0 +1,35 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+a.notif {
+  position: relative;
+  display: block;
+  height: 50px;
+  width: 50px;
+  background: url('/images/notify.png');
+  background-size: contain;
+  text-decoration: none;
+  margin-top: -8px;
+}
+.num {
+  position: absolute;
+  right: 100px;
+  top: -3px;
+  color: #fff !important;
+}
+
+//notification-panel style
+.notification-panel{
+  //width: 800px;
+  height: 600px;
+  margin: auto;
+}
+footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: gray;
+  color: white;
+  text-align: center;
+}

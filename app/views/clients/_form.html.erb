@@ -1,0 +1,84 @@
+
+<%= form_with(model: client, local: true) do |form| %>
+  <% if client.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(client.errors.count, "error") %> prohibited this client from being saved:</h2>
+
+      <ul>
+        <% client.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div class="row">
+    <div class="field col-sm-6">
+      <%= form.label :first_name %>
+      <%= form.text_field :first_name, :required => true %>
+    </div>
+
+    <div class="field col-sm-6">
+      <%= form.label :last_name %>
+      <%= form.text_field :last_name, :required => true %>
+    </div>
+  </div>
+
+  <div class="row">       
+  <div class="field col-sm-6">
+    <%= form.label :address %>
+    <%= form.text_area :address, :required => true %>
+  </div>
+
+  <div class="field col-sm-6">
+    <%= form.label :policy_type %>
+    <% form.number_field :policy_type %>
+    <%= form.collection_select :policy_type, Service.order(:name),:id,:service_name, :prompt => "select one" %>  </div>
+  </div>
+<div class="row">
+  <div class="field col-sm-6">
+    <%= form.label :company %>
+    <%= form.text_field :company %>
+  </div>
+
+  <div class="field col-sm-6">
+    <%= form.label :phone %>
+    <%= form.number_field :phone, :required => true %>
+  </div>
+  </div>
+  <div class="row">
+
+  <div class="field col-sm-6">
+    <%= form.label :email %>
+    <%= form.text_field :email, :required => true %>
+  </div>
+
+  <div class="field col-sm-6">
+    <%= form.label :policy_effective %>
+    <%= form.date_field :policy_effective, :required => true %>
+  </div>
+  </div>
+<div class="row">
+  <div class="field col-sm-6">
+    <%= form.label :expiration_date %>
+    <%= form.date_field :expiration_date %>
+  </div>
+
+  <div class="field col-sm-6">
+    <%= form.label :premium %>
+    <%= form.number_field :premium, :required => true %>
+  </div>
+  </div>
+<div class="row">
+  <div class="field col-sm-6">
+    <%= form.label :status %>
+   
+
+    <%= form.select :status, Client::STATUS %>
+  </div>
+
+  <div class="actions mt-2  text-center">
+    <%= form.submit 'Submit', :class => 'btn btn-success btn-lg' %>
+  </div>
+<% end %>
+</div>

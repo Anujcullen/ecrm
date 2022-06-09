@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @user_management.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @user_management.last_name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @user_management.address %>
+</p>
+
+<p>
+  <strong>Policy type:</strong>
+  <%= @user_management.policy_type %>
+</p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @user_management.company %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @user_management.phone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user_management.email %>
+</p>
+
+<p>
+  <strong>Policy effective:</strong>
+  <%= @user_management.policy_effective %>
+</p>
+
+<p>
+  <strong>Expiration date:</strong>
+  <%= @user_management.expiration_date %>
+</p>
+
+<p>
+  <strong>Premium:</strong>
+  <%= @user_management.premium %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @user_management.status %>
+</p>
+
+<%= link_to 'Edit', edit_user_management_path(@user_management) %> |
+<%= link_to 'Back', user_managements_path %>
